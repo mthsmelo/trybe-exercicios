@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Exercício</title>
+    <style>
+      section {
+        border-color: black;
+        border-style: solid;
+      }
+
+      .title {
+        text-align: center;
+      }
+
+      .main-content {
+        background-color: yellow;
+      }
+
+      .main-content .center-content {
+        background-color: red;
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .main-content .center-content p {
+        font-style: italic;
+      }
+
+      .main-content .left-content {
+        background-color: green;
+        width: 60%;
+        margin-left: 0;
+        margin-right: auto;
+      }
+
+      .main-content .left-content .small-image {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 100%;
+      }
+
+      .main-content .right-content {
+        background-color: blue;
+        width: 60%;
+        margin-left: auto;
+        margin-right: 0;
+      }
+
+      .main-content .description {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+    let tagH1 = document.createElement("h1");
+    tagH1.innerText = "Exercício - JavaScript DOM";
+    document.body.appendChild(tagH1);
+
+    let tagMain = document.createElement("main");
+    tagMain.className = "main-content";
+    document.body.appendChild(tagMain);
+
+    let tagSection = document.createElement("section");
+    tagSection.className = "center-content";
+    tagMain.appendChild(tagSection);
+
+    let tagP = document.createElement("p");
+    tagP.innerText= "Resolvendo o exercício da seção 5.2"
+    tagSection.appendChild(tagP)
+
+    let tagSection2 = document.createElement("section");
+    tagSection2.className = "left-content";
+    tagMain.appendChild(tagSection2);
+
+    let tagSection3 = document.createElement("section");
+    tagSection3.className = "right-content";
+    tagMain.appendChild(tagSection3);
+
+    let addImg = document.createElement("img")
+    addImg.src = "https://picsum.photos/200"
+    addImg.className = "small-image"
+    tagSection2.appendChild(addImg)
+
+    let addUl = document.createElement("ul")
+    tagSection3.appendChild(addUl)
+    let arrayNumbers = ["um", "dois", "tres", "quatro", "cinco", "seis" , "sete", "oito", "nove" , "dez"]
+      for (let i =0 ; i<arrayNumbers.length ; i+=1){
+       let addLi = document.createElement("li")
+       addLi.innerText = arrayNumbers[i]
+       addUl.appendChild(addLi) 
+      }
+
+      for (let i=1 ; i<=3 ; i+=1){
+        
+    let addH3 = document.createElement("h3")
+    tagMain.appendChild(addH3)
+      }
+    
+    let title = document.querySelector("h1")
+    title.className="title"
+
+    let tagsH3 = document.getElementsByTagName('h3')
+    for(let i=0 ; i <3 ; i+=1 ){
+      tagsH3[i].className = "description"
+    }
+
+    let removeLeft = document.getElementsByClassName("left-content")[0]
+      tagMain.removeChild(removeLeft)
+
+    let centerSection = document.getElementsByTagName("right-content")[0]
+    centerSection.style.marginRight = 'auto'
+
+    let changeColor = document.getElementsByClassName("center-content")[0];
+    changeColor.parentNode.style.backgroundColor = "black";
+
+    let removeItems = document.getElementsByTagName('ul')[0]
+    removeItems.lastChild.remove();
+    removeItems.lastChild.remove()
+
+    </script>
+  </body>
+</html>
