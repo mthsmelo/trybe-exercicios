@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+</head>
+<body class="p-3 mb-2 bg-primary text-white"></body>>
+    <header><center><h1>Formulário de Viagem</h1></center></header>
+ <form action=""  method="get"  >
+    <section class = "container" class="nome">
+        <label for="full-name">Nome Completo:</label>
+        <input class="form-control" required type="text" name="name" id="full-name" placeholder="Digite aqui o seu nome...">
+    </section>
+    <br>
+    <section class = "container" class="email">
+        <label for="email"> E-mail:</label>
+        <input class="form-control" required type="email" name="email" id="email" placeholder="Digite aqui seu e-mail...">
+    </section>
+    <br>
+
+    <section class = "container mb-3" class="destination">
+
+        <p>Selecione o seu destino preferido:</p>
+
+        <input class="form-check-input" type="radio" name="destino" id="fernando">
+        <label for="fernando">Fernando de Noronha</label>
+
+        <input class="form-check-input" type="radio" name="destino" id="jeri">
+        <label for="jeri">Jericoacoara</label>
+
+        <input class="form-check-input" type="radio" name="destino" id="floripa">
+        <label for="floripa">Florianópolis</label>
+
+        <input class="form-check-input" type="radio" name="destino" id="salvador">
+        <label for="salvador">Salvador</label>
+
+
+    </section>
+    <section class = "container" class="why">
+        <p>Por que você deveria ser a pessoa desenvolvedora a ganhar o concurso TrybeTrip? </p>
+
+        <textarea required name="motivo" id="" cols="60" rows="10" placeholder="Digite sua resposta aqui..."></textarea>
+
+
+    </section>
+<br>
+    <section class="container">
+        <label for="data">Qual a melhor data para realizar sua viagem?</label>
+        <input class="form-control" type="date" name="date" id="data">
+
+    </section>
+    <br>
+    <section class="container">
+        <input class="form-check-input" type="checkbox" name="requirement" id="requirement-button">
+        <label for="requirement-button">Gostaria de receber outras incríveis oportunidades oferecidas pela Trybe?</label>
+    </section>
+    <br>
+    <section class = "container" >
+        <input class="form-check-input" required type="checkbox" name="auto" id="auto-button">
+        <label for="auto-button">Concordo que imagens das minhas férias poderão ser usadas na divulgação de concursos futuros</label>
+    </section> 
+
+
+<br>
+
+
+
+<section class = "container" class="button-area">
+    <input  class="btn btn-outline-light" type="submit" name="submit" id="submit-button">
+    <input  class="btn btn-outline-light" type="reset" value="Limpar">
+
+</section>
+
+
+ </form>   
+
+ <script src="./scipt.js">
+
+ </script>
+</body>
+</html>
