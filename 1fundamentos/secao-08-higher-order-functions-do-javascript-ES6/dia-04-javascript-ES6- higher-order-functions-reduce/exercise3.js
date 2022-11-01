@@ -15,7 +15,7 @@ function containsA(array) {
       if (curr === "a" || curr === "A") {
         return acc + 1
       } return acc;
-    },0);
+    }, 0);
   });
   return contador;
 }
