@@ -14,7 +14,7 @@ const grades = [[9, 8, 10, 7, 5], [10, 9, 9, 10, 8], [10, 7, 10, 8, 9]];
 function studentAverage(array) {
   return array.map((student, index) => {
     return {
-      name: students[index], 
+      name: students[index],
       average: grades[index].reduce((acc, curr) => {
         return acc + curr
       }) / grades[index].length
